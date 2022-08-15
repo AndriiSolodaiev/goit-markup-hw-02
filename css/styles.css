@@ -1,12 +1,19 @@
 /*Змінні*/
 :root {
-    --primary-font: 'Roboto',sans-serif;
+    --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Raleway', sans-serif;
     --accent-color:#2196F3;
+    --title-text-color:#212121;
+    --general-text-color:#757575;
+    --background-color: #2F303A;
+    --title-text-color-dark-bcgr:#FFFFFF;
+    --btn-bcgr-color:#188CE8;
+    --secondary-logo-color:#000000;
 }
 /*Скидання налаштувань браузера*/
 .link {
     text-decoration: none;
+    font-style: normal;
 }
 
 .list {
@@ -22,18 +29,18 @@ button {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--primary-font);
     font-size: 14px;
-    color: #757575;
+    color: var(--general-text-color);
     letter-spacing: 0.03em;
 }
 
 .logo {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    color:#000000;
+    color: var(--secondary-logo-color);
 }
 .logo-first-part {
     color:var(--accent-color);
@@ -43,7 +50,10 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: #212121;
+    color: var(--title-text-color);
+}
+.menu-link.current {
+    color: var(--accent-color);
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -55,13 +65,16 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: #757575;
+    color:var(--general-text-color);
 }
 .contact-email:hover,
 .contact-email:focus,
 .contact-phone-number:hover,
 .contact-phone-number:hover {
-    color: var(--accent-color)
+    color: var(--accent-color);
+}
+.main-title {
+    background-color: var(--background-color);
 }
 .title {
     font-weight: 900;
@@ -70,7 +83,7 @@ body {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    /* color: #FFFFFF; */
+    color: var(--title-text-color-dark-bcgr);
 }
 
 .modal-open-btn {
@@ -81,14 +94,14 @@ body {
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    color: #FFFFFF;
+    color: var(--title-text-color-dark-bcgr);
 
     background-color: var(--accent-color);
     border-radius: 4px;
 }
 .modal-open-btn:hover,
 .modal-open-btn:focus {
-    background: #188CE8;
+    background: var(--btn-bcgr-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .benefits-name {
@@ -96,7 +109,7 @@ body {
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
-    color: #212121;
+    color: var(--title-text-color);
 }
 .benefits-description {
 line-height: 1.71;
@@ -107,7 +120,7 @@ line-height: 1.71;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-    color: #212121;
+    color: var(--title-text-color);
 }
 /* Team */
 .team-title {
@@ -115,27 +128,33 @@ line-height: 1.71;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-    color: #212121;
+    color: var(--title-text-color);
 }
 .member-name {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;    
-    color: #212121;
+    color: var(--title-text-color);
 }
 .member-position {
     font-size: 16px;
     line-height: 1.19;
 }
 /* Footer */
+.page-footer {
+    background-color: var(--background-color);
+}
+.page-footer > .logo-footer {
+    color:var(--title-text-color-dark-bcgr);
+}
 .location-link {
     line-height: 1.71;    
-    /* color: #FFFFFF; */
+    color: var(--title-text-color-dark-bcgr); 
 }
 .footer-email,
 .footer-phone-number{
     line-height: 1.71;
-    /* color: rgba(255, 255, 255, 0.6); */
+    color: rgba(255, 255, 255, 0.6);
 } 
 
 
@@ -144,14 +163,14 @@ line-height: 1.71;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
-    color: #212121;
+    color: var(--title-text-color);
 }
 .filter-btn:hover,
 .filter-btn:focus {
 background-color: var(--accent-color);
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 border-radius: 4px;
-color: #FFFFFF;
+color: var(--title-text-color-dark-bcgr);
 }
 
 .project-title {
@@ -159,7 +178,7 @@ color: #FFFFFF;
     font-size: 18px;
     line-height: 2;    
     letter-spacing: 0.06em;
-    color: #212121;
+    color: var(--title-text-color);
 } 
 .project-identifire {
     font-size: 16px;
